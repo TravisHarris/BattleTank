@@ -17,5 +17,9 @@ class BATTETANK_API ATankAiController : public AAIController
 
 public:
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 	ATank* GetControlledTank() const;
+
+private:
+	ATank* PlayerTank = nullptr;
 };
